@@ -16,7 +16,7 @@ namespace CapMemoryTest
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
-            builder.Services.AddHostedService<SubscribeKafkaHostedService>();
+            builder.Services.AddHostedService<SubscribeKafkaBackgroundService>();
 
             builder.Services.AddCap(capOptions =>
             {

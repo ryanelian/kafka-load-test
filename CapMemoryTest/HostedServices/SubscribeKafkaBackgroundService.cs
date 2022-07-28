@@ -4,12 +4,12 @@ using System.Text.Json;
 
 namespace CapMemoryTest.HostedServices
 {
-    public class SubscribeKafkaHostedService : BackgroundService
+    public class SubscribeKafkaBackgroundService : BackgroundService
     {
-        private readonly ILogger<SubscribeKafkaHostedService> _logger;
+        private readonly ILogger<SubscribeKafkaBackgroundService> _logger;
         private readonly ConsumerBuilder<Ignore, string> _consumerBuilder;
 
-        public SubscribeKafkaHostedService(IConfiguration configuration, ILogger<SubscribeKafkaHostedService> logger)
+        public SubscribeKafkaBackgroundService(IConfiguration configuration, ILogger<SubscribeKafkaBackgroundService> logger)
         {
             _logger = logger;
             var broker = configuration.GetConnectionString("Kafka");
